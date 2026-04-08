@@ -23,14 +23,45 @@ const f = 0;
 var x = a * b;
 console.log(x);
 
-// Variáveis Case Sensitive
 
-var nome = "João";;
-var NOME = "Luccas";
+// Aprendendo variáveis
 
-console.log(nome);
-console.log(NOME);
+var pote = "Bombom";
+alert(pote);
 
-var primeiroNome = "João";
-var ultimo_nome = "Damiani";
+// Declaração de variáveis
+var x, y, z;
+
+// Atribuição de valores
+x = 2;
+y = 3;
+z = x + y;
+
+alert(z);
+
+var nome, sobrenome, nomeCompleto, idade;
+
+nome = "João";
+sobrenome = "Damiani";
+idade = 32;
+nomeCompleto = nome + " " + sobrenome;
+
+pessoa = idade + nome;
+
+document.getElementById("texto").innerHTML = pessoa;
+
+
+// Let torna a variável única - usado para praticamente tudo
+
+let person = "John";
+
+{
+    let person = "Marie";
+}
+
+console.log(person); // ficará sendo João
+
+// Const nunca pode mudar - usado para valores que não mudam
+
+const pi = 3.14159265359;
 
