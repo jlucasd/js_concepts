@@ -1,3 +1,9 @@
+/*
+Autor: João Damiani
+Criado em: 08/04/2026
+*/
+
+// Inserindo um texto no parágrafo
 document.getElementById("texto").innerHTML = "Meu primeiro texto <b>JS</b>!";
 alert(10 + 5);
 console.log("Oi isso é um console.log!");
