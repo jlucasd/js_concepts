@@ -75,56 +75,93 @@
 // Operador Condicional (Ternário)
 // Operadores Lógicos
 
+// var valor1, valor2, total;
+// valor1 = 5;
+// valor2 = 2;
+
+// // Aritmético
+// total = valor1 + valor2;
+// total = valor1 - valor2;
+// total = valor1 * valor2;
+// total = valor1 / valor2;
+// total = ++valor1; // Coloca 1 a mais
+// total = --valor1; // Coloca 1 a mais
+// alert(total);
+// alert('O valor 1 ficou: ' + valor1);
+
+// // Atribuição / Aritmético
+// valor1 = valor1 + valor2;
+// valor1 += valor2;
+// valor1 -= valor2;
+// valor1 *= valor2;
+// valor1 /= valor2;
+
+// // Sequência
+// var nome, sobreNome, nomeCompleto;
+// nome = "Dimitri ";
+// sobreNome = "Teixeira";
+
+// nomeCompleto = nome + sobreNome
+// alert(nomeCompleto);
+
+// // Lógicos
+// var valor3;
+// valor3 = "8";
+// total = (valor1 == valor2); // igual
+// total = (valor1 === valor3); // vai ver se o valor E o tipo são iguais
+// total = (valor1 != valor2); // diferente
+// total = (valor1 !== valor3); // vai ver se o valor E o tipo são diferentes
+// total = (valor1 < 4); // menor
+// total = (valor1 > 4); //maior
+// total = (valor1 <= 4); // menor ou igual
+// total = (valor1 >= 4); // maior ou igual
+// alert(total);
+
+// // Condicional
+// var idade, eleitor, resultado;
+// idade = 17;
+// eleitor = (idade<18) ? "Não Eleitor" : "Sim, eleitor";
+
+// alert("A resposta é: " + eleitor + " a idade dele é de: "+ idade);
+
+
+// // Lógicos
+// resultado = (idade > 60 && idade <70); // E
+// resultado = (idade > 60 || idade <70); // OU
+
+
+// Funções
+
 var valor1, valor2, total;
-valor1 = 5;
-valor2 = 2;
 
-// Aritmético
-total = valor1 + valor2;
-total = valor1 - valor2;
-total = valor1 * valor2;
-total = valor1 / valor2;
-total = ++valor1; // Coloca 1 a mais
-total = --valor1; // Coloca 1 a mais
-alert(total);
-alert('O valor 1 ficou: ' + valor1);
+function soma(valor1, valor2){
+    return valor1 + valor2;
+}
 
-// Atribuição / Aritmético
-valor1 = valor1 + valor2;
-valor1 += valor2;
-valor1 -= valor2;
-valor1 *= valor2;
-valor1 /= valor2;
+function realParaDolar(real, cotacaoDolar){
+    return real * cotacaoDolar;
+}
 
-// Sequência
-var nome, sobreNome, nomeCompleto;
-nome = "Dimitri ";
-sobreNome = "Teixeira";
+function alertaHello(){
+    alert("Olá Mundo!!!!!")
+}
 
-nomeCompleto = nome + sobreNome
-alert(nomeCompleto);
+function paraCelsius(valorFahrenheit){
+    return (5/9) * (valorFahrenheit - 32);
+}
 
-// Lógicos
-var valor3;
-valor3 = "8";
-total = (valor1 == valor2); // igual
-total = (valor1 === valor3); // vai ver se o valor E o tipo são iguais
-total = (valor1 != valor2); // diferente
-total = (valor1 !== valor3); // vai ver se o valor E o tipo são diferentes
-total = (valor1 < 4); // menor
-total = (valor1 > 4); //maior
-total = (valor1 <= 4); // menor ou igual
-total = (valor1 >= 4); // maior ou igual
-alert(total);
+function colocaTexto(total){
+    document.getElementById("texto").innerHTML = total;
+}
 
-// Condicional
-var idade, eleitor, resultado;
-idade = 17;
-eleitor = (idade<18) ? "Não Eleitor" : "Sim, eleitor";
+total = soma(2, 2);
 
-alert("A resposta é: " + eleitor + " a idade dele é de: "+ idade);
+colocaTexto(total);
 
+total = realParaDolar(10, 5.10);
 
-// Lógicos
-resultado = (idade > 60 && idade <70); // E
-resultado = (idade > 60 || idade <70); // OU
+colocaTexto(total);
+
+total = paraCelsius(80);
+
+colocaTexto(total);
