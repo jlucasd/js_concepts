@@ -333,3 +333,41 @@ alert(pessoa[pessoa.length - 1]); // mostra o último elemento
 pessoa.push("Brasileiro"); //adiciona um elemento no final
 
 Array.isArray(pessoa); //verifica se é um array.
+
+pessoa.pop(); // remove o último elemento
+pessoa.shift(); // remove o primeiro elemento
+pessoa.unshift("Pai"); // adiciona um elemento no início
+pessoa.splice(1, 0, "sobrenome", "do Baba"); // remove um elemento pelo índice e adiciona um novo elemento
+
+const super_lista = lista.concat(lista_frutas); // concatena arrays com 1 ou mais.
+
+const jogadores = ["Biro Biro", "Ribamar", "Romário", "Zico", "Pelé", "Neymar", "Cristiano Ronaldo", "Vampeta"]
+const craques = jogadores.slice(2, 7); // corta a lista com os elementos do índice 2 ao 4 (não incluso)
+
+const jogadores_ordenados = jogadores.sort(); // ordena em ordem alfabética
+const jogadores_ordenados_reverso = jogadores.reverse(); // inverte a ordem alfabética
+
+const numeros = [40, 100, 1, 5, 25, 10];
+const numeros_ordenados = numeros.sort(function (a, b) { return a - b }); // ordena em ordem crescente
+const maior_20 = numeros.filter(filtroNumeros);
+
+function maiorNumero(arr) {
+    return Math.max.apply(null, arr);
+}
+
+function menorNumero(arr) {
+    return Math.min.apply(null, arr);
+}
+
+function filtroNumeros(value, index, array) {
+    return value > 20;
+}
+
+
+
+document.getElementById("texto").innerHTML = maior_20;
+
+// delete pessoa[0]; // remove um elemento pelo índice, mas não altera os indices, deixa buracos. NÃO USAR!
+
+
+
