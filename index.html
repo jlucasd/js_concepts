@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendendo JS</title>
     <style>
-        body{
+        body {
             text-align: center;
         }
     </style>
 </head>
-<body>
+
+<body onload="alert('Terminou de carregar!')" onresize="alert('Redimensionou a tela!')">
+    <!-- <body> onmousedown="alert('clicou na tela')" onmouseup="alert('soltou o clique')"> -->
     <!-- Interno -->
-     <h1>Aprendendo Javascript</h1>
-     <p id="texto"></p>
-     <button onclick="alertaHello()">Clique aqui</button>
-     <p>
+    <h1>Aprendendo Javascript</h1>
+    <p id="texto"></p>
+    <button ondblclick="eventoDblClick()">Clique aqui</button><br><br>
+
+    <select id="itens" onchange="eventoOnChange()">
+        <option value="1">Item 1</option>
+        <option value="2">Item 2</option>
+        <option value="3">Item 3</option>
+    </select>
+
+    <br><br>
+
+    <div id="quadrado" style="margin: auto auto; width: 80%; height: 200px; background: blue;"
+        onmouseover="eventoMouseOver()" onmouseout="eventoMouseOut()" onmousemove="eventoMouseMove()">
+    </div>
+
+    <br>
+
+    <input id="cadastro" style="padding: 80px; font-size: 40px;" type="text" placeholder="Digite seu nome" value="João"
+        onfocus="eventoOnFocus()" onblur="eventoOnBlur()" onkeypress="eventoOnKeyPress()" onkeydown="eventoOnKeyDown()"
+        onkeyup="eventoOnKeyUp()">
+    <p>
         <script>
             document.write('Oi escrito com document write');
         </script>
-     </p>
+    </p>
     <script src="js/index.js"></script>
 </body>
+
 </html>

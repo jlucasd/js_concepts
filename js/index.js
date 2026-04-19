@@ -132,36 +132,159 @@
 
 // Funções
 
-var valor1, valor2, total;
+// var valor1, valor2, total;
 
-function soma(valor1, valor2){
-    return valor1 + valor2;
+// function soma(valor1, valor2){
+//     return valor1 + valor2;
+// }
+
+// function realParaDolar(real, cotacaoDolar){
+//     return real * cotacaoDolar;
+// }
+
+// function alertaHello(){
+//     alert("Olá Mundo!!!!!")
+// }
+
+// function paraCelsius(valorFahrenheit){
+//     return (5/9) * (valorFahrenheit - 32);
+// }
+
+// function colocaTexto(total){
+//     document.getElementById("texto").innerHTML = total;
+// }
+
+// total = soma(2, 2);
+
+// colocaTexto(total);
+
+// total = realParaDolar(10, 5.10);
+
+// colocaTexto(total);
+
+// total = paraCelsius(80);
+
+// colocaTexto(total);
+
+// Objetos
+
+// const carro = {
+//     marca:"Ford", 
+//     modelo:"Ka", 
+//     ano:2015, 
+//     placa:"ABC-1234",
+//     buzina: function() {alert('Biiiiiiiii')},
+//     completo: function(){
+//         return "A marca é: "+ this.marca + " e o modelo é: "+ this.modelo
+//     }
+// }; //É comum usar o const para objetos
+
+// console.log(carro.completo());
+
+
+// Eventos
+
+// Existem muitos eventos. Veja os mais utilizados:
+
+
+//Click
+// onclick -> Disparado quando recebe um click.
+// ondblclick -> Disparado quando clique duplo.
+
+//Mouse
+// onmouseover -> Disparado quando o mouse está sobre.
+// onmouseout -> Disparado quando o mouse é movido para fora do elemento.
+// onmousemove -> Disparado quando o mouse é movido no elemento.
+// onmousedown -> Disparado quando o clique do botão foi pressionado.
+// onmouseup -> Disparado quando o clique do botão é liberado
+
+//Inputs / Forms
+// onfocus -> Disparado quando o elemento recebe o foco. Válido para input, s
+// onchange -> Disparado quando existe uma mudança no conteúdo. "Ao mudar".
+// onblur -> Disparado quando o elemento perde o foco.
+
+// Evento de tecla pressionada
+// onkeydown -> Disparado quando uma tecla é pressionada.
+// onkeypress -> Disparado quando uma tecla é pressionada e solta.
+// onkeyup -> Disparado quando uma tecla é solta sobre um elemento.
+
+
+// Evento de tela
+// onload -> Disparado quando a página terminou de ser carregada. Body.
+//onresize -> Disparado quando há um redimensionamento da janela.
+
+// onclick()
+
+function eventoClick() {
+    // alert("Acionou o evento de click!");
+    document.body.style.backgroundColor = "yellow";
 }
 
-function realParaDolar(real, cotacaoDolar){
-    return real * cotacaoDolar;
+// ondblclick
+
+function eventoDblClick() {
+    alert("Acionou o evento de duplo click!");
 }
 
-function alertaHello(){
-    alert("Olá Mundo!!!!!")
+// onmouseover
+
+function eventoMouseOver() {
+    let div = document.getElementById("quadrado")
+    div.style.backgroundColor = "red";
 }
 
-function paraCelsius(valorFahrenheit){
-    return (5/9) * (valorFahrenheit - 32);
+// onmouseout
+
+function eventoMouseOut() {
+    let div = document.getElementById("quadrado")
+    div.style.backgroundColor = "blue";
+    div.innerHTML = "";
 }
 
-function colocaTexto(total){
-    document.getElementById("texto").innerHTML = total;
+// onmousemove
+
+function eventoMouseMove() {
+    let p = document.getElementById("texto")
+    p.append("Mouse se movendo<br>");
 }
 
-total = soma(2, 2);
+// onfocus
 
-colocaTexto(total);
+function eventoOnFocus() {
+    let input = document.getElementById("cadastro");
+    input.value = "";
+}
 
-total = realParaDolar(10, 5.10);
+// onchange
 
-colocaTexto(total);
+function eventoOnChange() {
+    let select = document.getElementById("itens");
+    alert("O valor digitado foi: " + select.value);
+}
 
-total = paraCelsius(80);
+// onBlur
 
-colocaTexto(total);
+function eventoOnBlur() {
+    eventoClick()
+}
+
+// onkeypress
+
+function eventoOnKeyPress() {
+    let input = document.getElementById("cadastro").value;
+    console.log(input)
+}
+
+// onkeydown
+
+function eventoOnKeyDown() {
+    let input = document.getElementById("cadastro").value;
+    console.log(input)
+}
+
+// onkeyup
+
+function eventoOnKeyUp() {
+    let input = document.getElementById("cadastro").value;
+    console.log(input)
+}
