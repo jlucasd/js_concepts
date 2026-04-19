@@ -213,78 +213,123 @@
 // onload -> Disparado quando a página terminou de ser carregada. Body.
 //onresize -> Disparado quando há um redimensionamento da janela.
 
-// onclick()
+// // onclick()
 
-function eventoClick() {
-    // alert("Acionou o evento de click!");
-    document.body.style.backgroundColor = "yellow";
-}
+// function eventoClick() {
+//     // alert("Acionou o evento de click!");
+//     document.body.style.backgroundColor = "yellow";
+// }
 
-// ondblclick
+// // ondblclick
 
-function eventoDblClick() {
-    alert("Acionou o evento de duplo click!");
-}
+// function eventoDblClick() {
+//     alert("Acionou o evento de duplo click!");
+// }
 
-// onmouseover
+// // onmouseover
 
-function eventoMouseOver() {
-    let div = document.getElementById("quadrado")
-    div.style.backgroundColor = "red";
-}
+// function eventoMouseOver() {
+//     let div = document.getElementById("quadrado")
+//     div.style.backgroundColor = "red";
+// }
 
-// onmouseout
+// // onmouseout
 
-function eventoMouseOut() {
-    let div = document.getElementById("quadrado")
-    div.style.backgroundColor = "blue";
-    div.innerHTML = "";
-}
+// function eventoMouseOut() {
+//     let div = document.getElementById("quadrado")
+//     div.style.backgroundColor = "blue";
+//     div.innerHTML = "";
+// }
 
-// onmousemove
+// // onmousemove
 
-function eventoMouseMove() {
-    let p = document.getElementById("texto")
-    p.append("Mouse se movendo<br>");
-}
+// function eventoMouseMove() {
+//     let p = document.getElementById("texto")
+//     p.append("Mouse se movendo<br>");
+// }
 
-// onfocus
+// // onfocus
 
-function eventoOnFocus() {
-    let input = document.getElementById("cadastro");
-    input.value = "";
-}
+// function eventoOnFocus() {
+//     let input = document.getElementById("cadastro");
+//     input.value = "";
+// }
 
-// onchange
+// // onchange
 
-function eventoOnChange() {
-    let select = document.getElementById("itens");
-    alert("O valor digitado foi: " + select.value);
-}
+// function eventoOnChange() {
+//     let select = document.getElementById("itens");
+//     alert("O valor digitado foi: " + select.value);
+// }
 
-// onBlur
+// // onBlur
 
-function eventoOnBlur() {
-    eventoClick()
-}
+// function eventoOnBlur() {
+//     eventoClick()
+// }
 
-// onkeypress
+// // onkeypress
 
-function eventoOnKeyPress() {
-    let input = document.getElementById("cadastro").value;
-    console.log(input)
-}
+// function eventoOnKeyPress() {
+//     let input = document.getElementById("cadastro").value;
+//     console.log(input)
+// }
 
-// onkeydown
+// // onkeydown
 
-function eventoOnKeyDown() {
-    let input = document.getElementById("cadastro").value;
-    console.log(input)
-}
+// function eventoOnKeyDown() {
+//     let input = document.getElementById("cadastro").value;
+//     console.log(input)
+// }
 
-// onkeyup
+// // onkeyup
 
-function eventoOnKeyUp() {
-    let input = document.getElementById("cadastro").value;
-    console.log(input)
-}
+// function eventoOnKeyUp() {
+//     let input = document.getElementById("cadastro").value;
+//     console.log(input)
+// }
+
+/* ARRAYS
+Os arrays JavaScript são usados para armazenar vários valores
+em uma única variável. Diferente dos objetos, que funcionam com
+propriedades ou "nomes" que você dá para os itens dentro dele, os
+arrays não possuem propriedades. O item dentro dele é encontrado pela
+posição.
+
+Imagine um array como uma lista de itens, com controle, por ordem de
+posição dentro dele.
+
+Ex: const lista = ["arroz","feijão","macarrão","leite"];
+
+A lista[0] (lista na posição 0) vai conter o valor "arroz".
+A lista[1] (lista na posição 1) vai conter o valor "feijão".
+
+E assim por diante.
+*/
+
+const lista = ["arroz", "feijão", "macarrão", "leite"];
+
+const lista_nova = [];
+lista_nova[0] = "arroz";
+lista_nova[1] = "feijão";
+lista_nova[2] = "macarrão";
+lista_nova[3] = "leite";
+
+const lista_frutas = new Array("banana", "maçã", "laranja", "uva");
+
+lista[0] = "Café";
+
+console.log(lista);
+
+
+const pessoa = ["João", "Damiani", 32, "Masculino"]; //array
+const pessoa_obj = { nome: "João", sobrenome: "Damiani", idade: 32, genero: "Masculino" }; //objeto
+
+pessoa[0];
+pessoa_obj.nome;
+
+pessoa.length;
+alert(pessoa[pessoa.length - 1]); // mostra o último elemento
+pessoa.push("Brasileiro"); //adiciona um elemento no final
+
+Array.isArray(pessoa); //verifica se é um array.
