@@ -370,4 +370,36 @@ document.getElementById("texto").innerHTML = maior_20;
 // delete pessoa[0]; // remove um elemento pelo índice, mas não altera os indices, deixa buracos. NÃO USAR!
 
 
+/* IF e ELSE */
+
+var interruptor = "on";
+
+if (interruptor == "on") {
+    alert("A lampada está ligada");
+} else {
+    alert("A lampada está desligada");
+}
+
+var hora = new Date().getHours();
+
+if (hora < 12) {
+    alert("Bom dia!");
+} else if (hora < 18) {
+    alert("Boa tarde!");
+} else {
+    alert("Boa noite!");
+}
+
+function verificar() {
+    let nome = document.getElementById("nome").value;
+    let p = document.getElementById("texto");
+    if (nome == "" || nome == null) {
+        p.innerHTML = "Digite seu nome!";
+        p.style.color = "red";
+    } else {
+        p.innerHTML = "Tudo certo!!!"
+        p.style.color = "green";
+    }
+}
+
 
