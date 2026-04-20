@@ -403,3 +403,62 @@ function verificar() {
 }
 
 
+/* SWITCH 
+
+É usado para realizar diferentes ações com base em diferentes condições no mesmo bloco de verificação.
+Caso a condição não seja compatível não será executada e o valor padrão será acionado.
+Ele verifica também o tipo do dado, como o operador === do javascript.
+
+*/
+
+function verificaCor() {
+    let cor = document.getElementById("cor").value.toLowerCase();
+
+    switch (cor) {
+        case "azul":
+            document.body.style.backgroundColor = "blue";
+            break;
+        case "vermelho":
+            document.body.style.backgroundColor = "red";
+            break;
+        case "verde":
+            document.body.style.backgroundColor = "green";
+            break;
+        default:
+            document.getElementById("texto").innerHTML = "Nenhuma cor disponivel para: " + cor;
+    }
+}
+
+function diaDaSemana() {
+
+    let dia = new Date().getDay();
+
+    switch (dia) {
+        case 0:
+            document.getElementById("texto").innerHTML = "Hoje é Domingo";
+            break;
+        case 1:
+            document.getElementById("texto").innerHTML = "Hoje é Segunda-feira";
+            break;
+        case 2:
+            document.getElementById("texto").innerHTML = "Hoje é Terça-feira";
+            break;
+        case 3:
+            document.getElementById("texto").innerHTML = "Hoje é Quarta-feira";
+            break;
+        case 4:
+            document.getElementById("texto").innerHTML = "Hoje é Quinta-feira";
+            break;
+        case 5:
+            document.getElementById("texto").innerHTML = "Hoje é Sexta-feira";
+            break;
+        case 6:
+            document.getElementById("texto").innerHTML = "Hoje é Sábado";
+            break;
+        default:
+            document.getElementById("texto").innerHTML = "Não sei que dia é";
+    }
+}
+
+
+
