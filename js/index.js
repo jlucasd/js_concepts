@@ -460,5 +460,25 @@ function diaDaSemana() {
     }
 }
 
+/* Laço de repetição For
+    Laços oferecem um jeito fácil e rápido de repetir uma ação diversas vezes.
+*/
+
+for (let i = 0; i < 1001; i++) {
+    document.getElementById("texto").innerHTML += i + ", ";
+}
+
+var ano = new Date().getFullYear();
+
+for (let i = ano; i >= 1900; i--) {
+    document.getElementById("ano").innerHTML += "<option value='" + i + "'>" + i + "</option>";
+}
+
+const carros = ["Gol", "Corsa", "Palio", "Uno", "Fusca"];
+var tamanho = carros.length;
+
+for (let i = 0; i < tamanho; i++) {
+    document.getElementById("texto").innerHTML += carros[i] + "<br>";
+}
 
 
