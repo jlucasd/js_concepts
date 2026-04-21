@@ -10,6 +10,7 @@
             text-align: center;
         }
     </style>
+    <link rel="stylesheet" href="js/style.css">
 </head>
 
 <body onload="alert('Terminou de carregar!')" onresize="alert('Redimensionou a tela!')">
@@ -50,6 +51,12 @@
             document.write('Oi escrito com document write');
         </script>
     </p>
+
+    <h2>Controle de Tempo</h2>
+    <h2 id="tempo">10</h2>
+    <button class="start" onclick="ativarContagem()">Iniciar</button>
+    <button class="stop" onclick="pararContagem()">Parar</button>
+
     <script src="js/index.js"></script>
 </body>
 

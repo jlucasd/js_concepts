@@ -482,3 +482,37 @@ for (let i = 0; i < tamanho; i++) {
 }
 
 
+/* Eventos com tempo com Javascript
+
+SetTimeout -> milisegundos
+Executa uma função, depois de esperar um número de milisegundos.
+
+SetInterval -> milisegundos
+É o mesmo que o setTimeout, mas repete a execução da função continuamente.
+
+*/
+
+function ativarContagem() {
+    // document.getElementById("tempo").innerHTML = "Começou a contar!";
+    // // Ativa a função apenas 1 vez quando o tempo for especificado
+    // tempo = setTimeout(function () {
+    //     document.getElementById("tempo").innerHTML = "Executou o setTimeout";
+    // }, 5000);
+
+    tempo = setInterval(function () {
+        var cronometro = document.getElementById("tempo").innerHTML;
+        var soma = parseInt(cronometro) - 1;
+        document.getElementById("tempo").innerHTML = soma;
+        if (soma == 0) {
+            document.getElementById("tempo").innerHTML = "Tempo esgotado!";
+            pararContagem();
+        }
+    }, 1000);
+}
+
+function pararContagem() {
+    // clearTimeout(tempo);
+    clearInterval(tempo);
+}
+
+

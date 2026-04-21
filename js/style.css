@@ -1,0 +1,12 @@
+.start {
+    background: green;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+.stop {
+    background: tomato;
+    padding: 10px;
+    font-size: 20px;
+}
