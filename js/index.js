@@ -380,11 +380,11 @@ if (interruptor == "on") {
     alert("A lampada está desligada");
 }
 
-var hora = new Date().getHours();
+var hora_atual = new Date().getHours();
 
-if (hora < 12) {
+if (hora_atual < 12) {
     alert("Bom dia!");
-} else if (hora < 18) {
+} else if (hora_atual < 18) {
     alert("Boa tarde!");
 } else {
     alert("Boa noite!");
@@ -468,9 +468,9 @@ for (let i = 0; i < 1001; i++) {
     document.getElementById("texto").innerHTML += i + ", ";
 }
 
-var ano = new Date().getFullYear();
+var ano_atual = new Date().getFullYear();
 
-for (let i = ano; i >= 1900; i--) {
+for (let i = ano_atual; i >= 1900; i--) {
     document.getElementById("ano").innerHTML += "<option value='" + i + "'>" + i + "</option>";
 }
 
@@ -514,5 +514,112 @@ function pararContagem() {
     // clearTimeout(tempo);
     clearInterval(tempo);
 }
+
+
+/* Classes em Javascript
+
+São como fábricas para criar objetos. Criado em 2015 no ES6 no Javascript.
+
+*/
+
+class Carro {
+    constructor(marca, modelo, ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+
+    buzina() {
+        return this.modelo + "buzinou: Biiiiii";
+    }
+}
+
+
+const uno = new Carro("Fiat", "Uno", 2000);
+const mustang = new Carro("Ford", "Mustang", 1969);
+
+console.log(uno);
+console.log(mustang);
+console.log(uno.buzina());
+
+/* Manipular Datas em Javascript
+
+*/
+
+
+// Comando base para pegar a data
+let data = new Date();
+console.log(data);
+
+
+let ano = data.getFullYear();
+let mes = data.getMonth();
+
+// Mostrar mês por escrito
+const mesesDoAno = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+let mesEscrito = mesesDoAno[mes];
+console.log(mesEscrito);
+
+// Pegar dia do mês
+let diaMes = data.getDate();
+console.log(diaMes);
+
+// Pegar dia da semana
+let diaSemana = data.getDay();
+const diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+let diaSemanaEscrito = diasDaSemana[diaSemana];
+console.log(diaSemanaEscrito);
+
+// Pegar a Hora
+let hora = data.getHours();
+console.log(hora);
+
+// Pegar os Minutos
+let minutos = data.getMinutes();
+console.log(minutos);
+
+// Pegar os milissegundos
+let milissegundos = data.getMilliseconds();
+console.log(milissegundos);
+
+// Pegar a data no padrão brasileiro
+let dataBR = data.toLocaleString('pt-BR', { dateStyle: 'short' });
+console.log(dataBR);
+
+// Pegar os valores separados
+
+let data_formatada = new Date();
+diaMes = data_formatada.getDate();
+mes = data_formatada.getMonth() + 1;
+ano = data_formatada.getFullYear();
+
+function addZero(x) {
+    return x < 10 ? "0" + x : x;
+}
+
+let dataPadraoBR = addZero(diaMes) + "/" + addZero(mes) + "/" + ano;
+console.log(dataPadraoBR);
+
+
+// Comparar datas - Maior ou Menos. Ex: Vencimentos
+
+let hoje = new Date();
+let vencimento = new Date(2022, 0, 15);
+
+if (vencimento > hoje) {
+    console.log("Ainda não venceu");
+} else {
+    console.log("Sua conta venceu!");
+}
+
+// Diferença em dias entre duas datas
+
+let dataInicial = new Date();
+let dataFinal = new Date(2026, 11, 31);
+
+let diferenca = (dataFinal.getTime() - dataInicial.getTime());
+let diferencaDias = Math.ceil(diferenca / (24 * 60 * 60 * 1000));
+
+console.log("Faltam " + diferencaDias + " dias para o reveillon");
 
 
