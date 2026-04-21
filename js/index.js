@@ -623,3 +623,62 @@ let diferencaDias = Math.ceil(diferenca / (24 * 60 * 60 * 1000));
 console.log("Faltam " + diferencaDias + " dias para o reveillon");
 
 
+/** JSON **
+
+JSON significa JavaScript Object Notation que traduzido pro português fica algo
+como notação de objeto JavaScript.
+
+Explicando de um modo simples JSON é basicamente uma forma de converter um objeto
+em texto e o contrário também, um texto em um objeto.
+
+Ele é usado principalmente para transmitir dados entre sistemas de forma simples,
+já que o formato de texto é lido por praticamente toda linguagem de programação.
+
+Para trabalhar com JSON no Javascript usamos dois métodos:
+
+JSON.parse() -> Converte texto no padrão JSON em objetos
+JSON.stringify() -> Converte objetos em texto padrão JSON
+
+*/
+
+const carroNovo = {
+    marca: "Fiat",
+    modelo: "Uno",
+    ano: 2000,
+    cor: "Branco",
+}
+
+// Convertendo objeto para texto JSON
+let carroTexto = JSON.stringify(carroNovo);
+document.getElementById("texto").innerHTML = carroTexto;
+
+// Convertendo texto para objeto
+let carroObjeto = JSON.parse(carroTexto);
+console.log(carroObjeto);
+
+// const ajax = new XMLHttpRequest();
+// ajax.open("GET", "https://viacep.com.br/ws/88790000/json/");
+// ajax.send();
+
+// ajax.onload = function () {
+//     document.getElementById("texto").innerHTML = this.responseText;
+//     let obj = JSON.parse(this.responseText);
+//     alert(obj.localidade);
+// }
+
+function buscarCep() {
+    let cep = document.getElementById("cep").value;
+    const ajax = new XMLHttpRequest();
+    ajax.open("GET", "https://viacep.com.br/ws/" + cep + "/json/");
+    ajax.send();
+
+    ajax.onload = function () {
+        let obj = JSON.parse(this.responseText);
+        let logradouro = obj.logradouro;
+        let localidade = obj.localidade;
+        let estado = obj.uf;
+        document.getElementById("texto").innerHTML = "Rua: " + logradouro + " - Cidade: " + localidade + " - Estado: " + estado;
+    }
+}
+
+
