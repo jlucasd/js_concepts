@@ -1,7 +1,14 @@
-Este projeto foi criado para praticar os conceitos fundamentais de JavaScript, incluindo manipulação do DOM, funções, variáveis e muito mais.
+# JavaScript Concepts
 
-## Referências
+This project was created to practice the fundamental concepts of JavaScript, including DOM manipulation, functions, variables, and more.
+
+## Technologies
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+
+## References
 - [Programação Web](https://programacaoweb.com.br/)
-- [Curso JS no YouTube](https://www.youtube.com/playlist?list=PL2Fdisxwzt_d590u3uad46W-kHA0PTjjw)
+- [JS Course on YouTube](https://www.youtube.com/playlist?list=PL2Fdisxwzt_d590u3uad46W-kHA0PTjjw)
 
-## Desenvolvido por João Luccas Damiani.
+## Developed by João Luccas Damiani.
